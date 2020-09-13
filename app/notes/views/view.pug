@@ -1,0 +1,12 @@
+extends /index
+
+block header
+    h1.title= note.title
+
+    div.buttons
+        a.card-footer-item(href= "/notes") Назад
+        a.card-footer-item(href= `/notes/${note._id}/update`) Редактировать 
+        a.card-footer-item(href= `/notes/${note._id}/delete`) Удалить
+
+block main
+    div.content= note.content
